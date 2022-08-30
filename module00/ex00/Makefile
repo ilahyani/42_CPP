@@ -1,4 +1,4 @@
-SRC = megaphone.cpp main.cpp
+SRC = megaphone.cpp
 
 OBJ = $(SRC:%.cpp=%.o)
 
