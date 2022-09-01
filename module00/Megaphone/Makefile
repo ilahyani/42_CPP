@@ -16,7 +16,7 @@ $(NAME): $(OBJ)
 			$(CC) $(CFLAGS) $(OBJ) -std=c++98 -o $(NAME)
 
 %.o: %.c	$(HEADER)
-			$(CC) (CFLAGS) $(OBJ) -std=c++98 -o $(NAME)
+			$(CC) (CFLAGS) -std=c++98 -c $< -o $@
 
 clean:
 		rm -rf $(OBJ)
