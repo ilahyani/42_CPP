@@ -12,10 +12,10 @@ HEADER = ./Account.hpp
 
 all:	$(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADER)
 			$(CC) $(CFLAGS) $(OBJ) -std=c++98 -o $(NAME)
 
-%.o: %.c	$(HEADER) #this is wrong! CHANGE ITTTTT
+%.o: %.c	$(HEADER)
 			$(CC) (CFLAGS) -std=c++98 -c $< -o $@
 
 clean:
