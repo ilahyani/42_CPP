@@ -6,9 +6,13 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:25:33 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/09/21 19:31:22 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/10/21 15:35:50 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+#include "Weapon.hpp"
 
 int main(void)
 {
