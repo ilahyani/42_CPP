@@ -1,4 +1,4 @@
-SRC = main.cpp Weapon.hpp Weapon.cpp HumanA.hpp HumanA.cpp HumanB.hpp HumanB.cpp
+SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJ = $(SRC:%.cpp=%.o)
 
@@ -6,7 +6,7 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror
 
-NAME = violence
+NAME = UnnecessaryViolence
 
 HEADERS = Weapon.hpp HumanA.hpp HumanB.hpp
 

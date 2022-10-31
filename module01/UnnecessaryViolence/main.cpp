@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:25:33 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/10/21 15:35:50 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/10/31 16:30:46 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main(void)
 {
     {
-        Weapon club = Weapon("crude spiked club");
+        Weapon  club = Weapon("crude spiked club");
         HumanA bob("Bob", club);
         bob.attack();
         club.setType("some other type of club");
