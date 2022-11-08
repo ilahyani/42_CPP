@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:14:27 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/07 15:06:31 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/07 17:51:46 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ int main(int ac, char **av)
         }
     }
     os << str;
+    ifs.close();
+    os.close();
     return (0);
 }
