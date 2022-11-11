@@ -6,7 +6,7 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 
-NAME = zombie
+NAME = Harl
 
 HEADER = ./Harl.hpp
 
