@@ -6,18 +6,18 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 13:13:00 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/11 17:54:50 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/11 17:59:15 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+typedef void (Harl::*ptr2mbr)(void);
 
 void    Harl::complain(std::string level) {
-    typedef void (Harl::*ptr2mbr)(void);
+    ptr2mbr fun[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     std::string tab [4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     int i;
 
-    ptr2mbr fun[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
     for (i = 0; i < 4; i++)
         if (level == tab[i])
             break;
