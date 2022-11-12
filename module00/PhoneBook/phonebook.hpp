@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:22:53 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/09/01 11:02:46 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/12 13:57:08 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define PHONEBOOK_HPP
 
 #include <iostream>
+#include <string>
+#include <limits>
 
 class   Contact
 {
@@ -24,8 +26,6 @@ class   Contact
 	std::string nick_name;
 	std::string phone_nbr;
 	std::string darkest_secret;
-	bool	available;
-	int		history;
 };
 
 class   PhoneBook
