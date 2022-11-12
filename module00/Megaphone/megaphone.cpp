@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 14:21:49 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/08/30 14:42:53 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/12 12:31:32 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int main(int ac, char **av)
 {
-    int i;
-    int j;
+    int         i;
+    int         j;
+    std::string str;
 
     if (ac == 1)
         return (std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl, 0);
@@ -23,13 +24,13 @@ int main(int ac, char **av)
     {
         for (j = 0; av[i][j]; j++)
         {
-            isalpha(av[i][j]) 
-            ? std::cout << (char) toupper(av[i][j])
-            : std::cout << av[i][j];
+            (av[i][j] >= 'a' && av[i][j] <= 'z')
+            ? str.append(1, av[i][j] - 32)
+            : str.append(1, av[i][j]);
         }
         if (av[i + 1])
-            std::cout << " ";
+            str.append(" ");
     }
-    std::cout << std::endl;
+    std::cout << str << std::endl;
     return (0);
 }
