@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 11:08:29 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/09/04 13:22:43 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/12 16:51:37 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int idx = -1;
 int Account::_nbAccounts = 8;
 int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
-int Account::c = 0;
+int Account::_totalNbWithdrawals = 0;
 
 Account::Account(int initial_deposit)
     : _accountIndex(++idx), _amount(initial_deposit) ,_nbDeposits(0), _nbWithdrawals(0)
@@ -39,7 +39,7 @@ Account::~Account(void)
 
 void    Account::_displayTimestamp(void)
 {
-    std::cout << "[1337_012345] ";
+    std::cout << "[1337_012342] ";
 }
 
 int Account::getNbAccounts(void)
@@ -59,7 +59,7 @@ int Account::getNbDeposits(void)
 
 int Account::getNbWithdrawals(void)
 {
-    return (Account::c);
+    return (Account::_totalNbWithdrawals);
 }
 
 void    Account::displayAccountsInfos()
@@ -101,7 +101,7 @@ bool	Account::makeWithdrawal(int withdrawal)
             << ";amount:" << _amount
             << ";nb_withdrawals:" << ++_nbWithdrawals;
         _totalAmount -= withdrawal;
-        c++;
+        _totalNbWithdrawals++;
     }
     else
     {
