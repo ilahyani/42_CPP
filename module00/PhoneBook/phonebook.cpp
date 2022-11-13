@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 16:22:42 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/12 18:45:19 by ilahyani         ###   ########.fr       */
+/*   Created: 2022/11/13 11:15:35 by ilahyani          #+#    #+#             */
+/*   Updated: 2022/11/13 11:15:37 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void    Contact::add()
     int i;
 
     std::cout << "Creating a new contact.. " << std::endl;
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     i = 0;
     while (i < 5) {
         std::cout << "Enter the " << fields[i] << " please: ";
