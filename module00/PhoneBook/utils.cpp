@@ -6,18 +6,18 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 10:51:22 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/12 16:22:36 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/12 18:29:09 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
-int get_index(PhoneBook phonebook)
+int get_index(PhoneBook PhoneBook)
 {
     int i;
 
     for (i = 0; i < 8; i++)
-        if (phonebook.contacts[i].first_name.length() == 0)
+        if (PhoneBook.contacts[i].first_name.length() == 0)
             break;
     return (i);
     

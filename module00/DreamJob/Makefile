@@ -13,10 +13,10 @@ HEADER = ./Account.hpp
 all:	$(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
-			$(CC) $(CFLAGS) $(OBJ) -std=c++98 -o $(NAME)
+			$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.c	$(HEADER)
-			$(CC) (CFLAGS) -std=c++98 -c $< -o $@
+			$(CC) (CFLAGS) -c $< -o $@
 
 clean:
 		rm -rf $(OBJ)

@@ -6,11 +6,11 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:22:42 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/12 16:39:08 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/12 18:45:19 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook() {}
 
@@ -26,6 +26,10 @@ void    Contact::add()
     while (i < 5) {
         std::cout << "Enter the " << fields[i] << " please: ";
         getline(std::cin, input);
+        if (std::cin.eof()) {
+            std::cout << "\nNo contact have been added! Aborting.." << std::endl;
+            exit(0) ;
+        }
         if (input.length() == 0)
             std::cout << fields[i] << " Can't be empty! Try again:\n";
         else {
@@ -58,14 +62,18 @@ void    PhoneBook::search()
     }
     std::cout << "Who are you looking for? ";
     std::cin >> idx;
+    if (std::cin.eof()) {
+        std::cout << "\nAborting.. \n";
+        exit(0);
+    }
     if (std::cin.fail())
     {
-        std::cout << "Oh no, try a number next time!" << std::endl;
+        std::cout << "Wrong, try a number next time!" << std::endl;
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
-    else if (idx > 7 || contacts[idx].first_name.length() == 0)
-        std::cout << "NUMBER " << idx << " was absorbed by the upside-down! Let's try again" << std::endl;
+    else if (idx < 0 || idx > 7 || contacts[idx].first_name.length() == 0)
+        std::cout << "contact " << idx << " doesn't exist! Let's try again" << std::endl;
     else
         print_contact(contacts[idx]);
 }

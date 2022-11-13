@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:22:53 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/12 13:57:08 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/12 18:29:09 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ class   PhoneBook
 		void    search();
 };
 
-int		get_oldest(PhoneBook phonebook);
-int		get_index(PhoneBook phonebook);
+int		get_oldest(PhoneBook PhoneBook);
+int		get_index(PhoneBook PhoneBook);
 void    print_column(std::string str);
 void    print_contact(Contact contact);
 
