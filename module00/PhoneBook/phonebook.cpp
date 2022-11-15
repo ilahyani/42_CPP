@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 11:15:35 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/13 11:15:37 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/15 11:00:33 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ void    PhoneBook::search()
 {
     int idx;
 
-    std::cout << "|index     |first name|last name |nick name |" << std::endl;
+    std::cout << "|     index|first name| last name| nick name|" << std::endl;
     for (int i = 0; i < 8 && contacts[i].first_name.length() != 0; i++)
     {
-        std::cout << "|";
-        std::cout << i << "         |";
+        std::cout << "|         ";
+        std::cout << i << "|";
         print_column(contacts[i].first_name);
         print_column(contacts[i].last_name);
         print_column(contacts[i].nick_name);
