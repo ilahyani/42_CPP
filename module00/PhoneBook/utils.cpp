@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 10:51:22 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/12 18:29:09 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/15 10:58:15 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void    print_column(std::string str)
         std::cout << str << "|";
     else if (len < 10)
     {
-        std::cout << str;
         for (i = 0; i < (10 - len); i++)
             std::cout << " ";
+        std::cout << str;
         std::cout << "|";
     }
     else
