@@ -15,7 +15,7 @@ all:	$(NAME)
 $(NAME): $(OBJ) $(HEADERS)
 			$(CC) $(CFLAGS) $(OBJ) -std=c++98 -o $(NAME)
 
-%.o: %.c	$(HEADERS)
+%.o: %.cpp	$(HEADERS)
 			$(CC) (CFLAGS) -std=c++98 -c $< -o $@
 
 clean:
