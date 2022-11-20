@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 08:57:24 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/20 10:06:10 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/20 12:11:28 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 #include <cmath>
 
-#define OFFSET pow(8, 2)
+#define OFFSET pow(2, 8)
 
 class Fixed
 {
