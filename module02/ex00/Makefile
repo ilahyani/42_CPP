@@ -4,7 +4,7 @@ OBJ = $(SRC:%.cpp=%.o)
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
 NAME = fixed
 
@@ -12,11 +12,8 @@ HEADER = Fixed.hpp
 
 all:	$(NAME)
 
-$(NAME): $(OBJ)
-			$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-
-%.o: %.c	$(HEADER)
-			$(CC) (CFLAGS) -c $< -o $@
+$(NAME): $(OBJ) $(HEADER)
+			$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 		rm -rf $(OBJ)
