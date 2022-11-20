@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 08:57:21 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/20 10:06:33 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/20 11:20:30 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int     Fixed::toInt(void) const {
 Fixed&  Fixed::operator=(const Fixed& other) {
     std::cout << "Copy assignment operator called\n";
     this->value = other.getRawBits();
+    return (*this);
 }
 
 std::ostream&   operator<<(std::ostream& stream, const Fixed& other) {
