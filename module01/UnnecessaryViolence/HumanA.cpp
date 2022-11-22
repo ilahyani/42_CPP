@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:26:59 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/10/31 16:25:47 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/22 18:24:50 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,9 @@
 #include "Weapon.hpp"
 
 HumanA::HumanA(std::string NewName, Weapon& NewWeapon)
-    : weapon(NewWeapon)
-{
-    weapon = NewWeapon;
-    name = NewName;
-}
+    : name(NewName), weapon(NewWeapon) {}
 
-HumanA::~HumanA()
-{
-}
+HumanA::~HumanA() {}
 
 void    HumanA::attack(void)
 {

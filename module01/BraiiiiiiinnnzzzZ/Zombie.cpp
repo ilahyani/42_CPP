@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 16:19:53 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/22 18:23:57 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/22 18:24:32 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void    Zombie::announce(void) {
 Zombie::~Zombie() {
     std::cout << Zombie::name << "\n";
 }
+
+Zombie::Zombie() {}
 
 void    Zombie::setName(std::string str) {
     name = str;
