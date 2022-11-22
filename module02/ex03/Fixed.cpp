@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 08:57:21 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/21 11:19:26 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/22 15:19:19 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 const int Fixed::bit_nbr = 8;
 
 Fixed::Fixed() {
-    // std::cout << "Default\n";
     value = 0;
 }
 
@@ -24,12 +23,10 @@ Fixed::Fixed(const Fixed& copy) {
 }
 
 Fixed::Fixed(const int x) {
-    // std::cout << "Int\n";
     value = x * (OFFSET);
 }
 
 Fixed::Fixed(const float f) {
-    // std::cout << "Float\n";
 	value = roundf(f * (float)(OFFSET));
 }
 
