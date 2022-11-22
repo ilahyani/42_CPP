@@ -4,7 +4,7 @@ OBJ = $(SRC:%.cpp=%.o)
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = megaphone
 
@@ -13,10 +13,10 @@ HEADER = ./megaphone.hpp
 all:	$(NAME)
 
 $(NAME): $(OBJ)
-			$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+			$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp	$(HEADER)
-			$(CC) (CFLAGS) -c $< -o $@
+			$(CC) (CPPFLAGS) -c $< -o $@
 
 clean:
 		rm -rf $(OBJ)

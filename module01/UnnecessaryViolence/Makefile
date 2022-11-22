@@ -4,7 +4,7 @@ OBJ = $(SRC:%.cpp=%.o)
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -Wall -Wextra -Werror
 
 NAME = UnnecessaryViolence
 
@@ -12,11 +12,11 @@ HEADERS = Weapon.hpp HumanA.hpp HumanB.hpp
 
 all:	$(NAME)
 
-$(NAME): $(OBJ) $(HEADERS)
-			$(CC) $(CFLAGS) $(OBJ) -std=c++98 -o $(NAME)
+$(NAME): $(OBJ) $(HEADER)
+			$(CC) $(CPPFLAGS) $(OBJ) -std=c++98 -o $(NAME)
 
-%.o: %.cpp	$(HEADERS)
-			$(CC) (CFLAGS) -std=c++98 -c $< -o $@
+%.o: %.cpp	$(HEADER)
+			$(CC) $(CPPFLAGS) -std=c++98 -c $< -o $@
 
 clean:
 		rm -rf $(OBJ)

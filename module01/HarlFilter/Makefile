@@ -4,7 +4,7 @@ OBJ = $(SRC:%.cpp=%.o)
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CPPFLAGS = -Wall -Wextra -Werror -fsanitize=address
 
 NAME = harlFilter
 
@@ -13,10 +13,10 @@ HEADER = ./Harl.hpp
 all:	$(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
-			$(CC) $(CFLAGS) $(OBJ) -std=c++98 -o $(NAME)
+			$(CC) $(CPPFLAGS) $(OBJ) -std=c++98 -o $(NAME)
 
 %.o: %.cpp	$(HEADER)
-			$(CC) (CFLAGS) -std=c++98 -c $< -o $@
+			$(CC) $(CPPFLAGS) -std=c++98 -c $< -o $@
 
 clean:
 		rm -rf $(OBJ)

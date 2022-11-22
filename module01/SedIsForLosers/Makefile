@@ -4,17 +4,17 @@ OBJ = $(SRC:%.cpp=%.o)
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CPPFLAGS = -Wall -Wextra -Werror -fsanitize=address
 
 NAME = SedIsForLosers
 
 all:	$(NAME)
 
-$(NAME): $(OBJ)
-			$(CC) $(CFLAGS) $(OBJ) -std=c++98 -o $(NAME)
+$(NAME): $(OBJ) $(HEADER)
+			$(CC) $(CPPFLAGS) $(OBJ) -std=c++98 -o $(NAME)
 
-%.o: %.cpp
-			$(CC) (CFLAGS) -std=c++98 -c $< -o $@
+%.o: %.cpp	$(HEADER)
+			$(CC) $(CPPFLAGS) -std=c++98 -c $< -o $@
 
 clean:
 		rm -rf $(OBJ)
