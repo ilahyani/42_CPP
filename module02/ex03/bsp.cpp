@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:30:03 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/22 15:04:55 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/22 18:17:26 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ bool bsp(Point const a, Point const b, Point const c, Point const point) {
     A3 = (point.getX() * (b.getY() - c.getY())
         + b.getX() * (c.getY() - point.getY())
         + c.getX() * (point.getY() - b.getY())) / 2;
+    if (A1 == 0 || A2 == 0 || A3 == 0)
+        return (false);
     if (abs(A.getRawBits())
-        <= abs(A1.getRawBits()) + abs(A2.getRawBits()) + abs(A3.getRawBits()))
+        == abs(A1.getRawBits()) + abs(A2.getRawBits()) + abs(A3.getRawBits()))
             return (true);
     return (false);
 }
