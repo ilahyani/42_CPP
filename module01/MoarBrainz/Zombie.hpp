@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:32:04 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/09/21 19:28:55 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/22 18:22:59 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 #include <string>
 
 class Zombie {
+    std::string name;
     public:
         ~Zombie();
         void setName(std::string str);
-    std::string name;
-    void announce (void);  
+        void announce (void);  
 };
 
 Zombie *newZombie(std::string name);

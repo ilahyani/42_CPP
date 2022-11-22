@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 13:12:58 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/11 15:17:41 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/22 18:22:48 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 #include <string>
 
 class   Harl {
-    public:
-        void    complain(std::string level);
     void    debug(void);  
     void    info(void);  
     void    warning(void);  
     void    error(void);  
+    public:
+        void    complain(std::string level);
 };
 
 #endif
