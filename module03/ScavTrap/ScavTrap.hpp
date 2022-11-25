@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 08:43:23 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/25 09:35:25 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/25 10:28:24 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class ScavTrap : public ClapTrap
         ScavTrap(std::string str);
         ~ScavTrap();
         void    guardGate(void);
+        virtual void attack(const std::string& target);
 };
 
 #endif

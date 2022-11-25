@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:42:03 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/25 09:30:52 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/25 10:14:15 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ ClapTrap::ClapTrap(std::string str)
 ClapTrap::~ClapTrap() {
     std::cout << "ClapTrap Default Destructor Called\n";
 }
-
-//PRINT STATUS AFTER ATTACK, DAMAGE AND REPAIR;
 
 void    ClapTrap::attack(const std::string& target) {
     if (HitPoints && EnergyPoints) {
