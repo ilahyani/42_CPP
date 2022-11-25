@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 09:50:52 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/25 10:28:29 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/25 18:36:41 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ class FragTrap : public ClapTrap
     public:
         FragTrap();
         FragTrap(std::string str);
+        FragTrap(const FragTrap& copy);
+        FragTrap& operator=(const FragTrap& other);
         ~FragTrap();
         void highFivesGuys(void);
-        virtual void attack(const std::string& target);
 };
 
 #endif

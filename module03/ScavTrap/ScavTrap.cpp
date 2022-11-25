@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 08:43:20 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/25 10:28:50 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/25 18:40:40 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,18 @@ ScavTrap::ScavTrap(std::string str) : ClapTrap(str) {
 
 ScavTrap::~ScavTrap() {
     std::cout << "ScavTrap Default Destructor Called\n";
+}
+
+ScavTrap::ScavTrap(const ScavTrap& copy) {
+    *this = copy;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
+    EnergyPoints = other.EnergyPoints;
+    HitPoints = other.HitPoints;
+    AttackDamage = other.AttackDamage;
+    name = other.name;
+    return (*this);
 }
 
 void    ScavTrap::guardGate(void) {

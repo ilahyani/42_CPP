@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:42:03 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/25 10:14:15 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/25 18:38:37 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,18 @@ ClapTrap::ClapTrap(std::string str)
 
 ClapTrap::~ClapTrap() {
     std::cout << "ClapTrap Default Destructor Called\n";
+}
+
+ClapTrap::ClapTrap(const ClapTrap& copy) {
+    *this = copy;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
+    EnergyPoints = other.EnergyPoints;
+    HitPoints = other.HitPoints;
+    AttackDamage = other.AttackDamage;
+    name = other.name;
+    return (*this);
 }
 
 void    ClapTrap::attack(const std::string& target) {
