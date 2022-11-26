@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:42:03 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/26 08:35:40 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/26 11:22:56 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void    ClapTrap::takeDamage(unsigned int amount)
 }
 
 void    ClapTrap::beRepaired(unsigned int amount) {
-    if (EnergyPoints) {
+    if (EnergyPoints && HitPoints) {
         std::cout << "ClapTrap " << name << " gains " << amount
             << " hit points\n";
         HitPoints += amount;
