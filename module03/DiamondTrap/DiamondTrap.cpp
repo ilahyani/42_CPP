@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 10:34:56 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/25 19:01:17 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/26 09:43:19 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,17 @@ DiamondTrap::DiamondTrap() {
 }
 
 DiamondTrap::DiamondTrap(std::string str) : name(str) {
+    std::cout << "DiamondTrap String Constructor Called\n";
     ClapTrap::name = str.append("_clap_name");
     this->HitPoints = FragTrap::HitPoints;
     this->AttackDamage = FragTrap::AttackDamage;
     this->EnergyPoints = ScavTrap::EnergyPoints;
-    std::cout << "DiamondTrap String Constructor Called\n";
     std::cout << "EnergyPoints: ";
     std::cout << EnergyPoints << "\n";
     std::cout << "HitPoints: ";
     std::cout << HitPoints << "\n";
     std::cout << "AttackDamage: ";
     std::cout << AttackDamage << "\n";
-    //add 
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& copy) {

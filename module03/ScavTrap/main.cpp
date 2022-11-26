@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:54:48 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/25 09:47:03 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/26 08:37:12 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,16 @@
 int main(void) {
     ScavTrap    obj("Mugiwara");
 
-    obj.attack("Kaido");
+    obj.attack ("Kaido");
+    std::cout << "\n";
     obj.takeDamage(5);
-    obj.beRepaired(2);
-    obj.takeDamage(15);
-    obj.beRepaired(111);
+    std::cout << "\n";
+    obj.beRepaired(5);
+    std::cout << "\n";
+    obj.takeDamage(10);
+    std::cout << "\n";
+    obj.attack ("Kaido");
+    std::cout << "\n";
+    obj.guardGate();
     return (0);
 }

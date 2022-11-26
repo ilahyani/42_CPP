@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:42:03 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/25 18:38:37 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/26 08:35:46 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,13 @@ void    ClapTrap::attack(const std::string& target) {
         EnergyPoints--;
         if (EnergyPoints < 0)
             EnergyPoints = 0;
+        std::cout << HitPoints << " HitPoints left | ";
+        std::cout << EnergyPoints << " EnergyPoints left\n";
     }
     if (!HitPoints)
         std::cout << name << " Can't attack, no HitPoints left\n";
     else if (!EnergyPoints)
         std::cout << name << " Can't attack, no EnergyPoints left\n";
-    std::cout << HitPoints << " HitPoints left | ";
-    std::cout << EnergyPoints << " EnergyPoints left\n";
 }
 
 void    ClapTrap::takeDamage(unsigned int amount) {
@@ -72,9 +72,9 @@ void    ClapTrap::beRepaired(unsigned int amount) {
         EnergyPoints--;
         if (EnergyPoints < 0)
             EnergyPoints = 0;
+        std::cout << HitPoints << " HitPoints left | ";
+        std::cout << EnergyPoints << " EnergyPoints left\n";
     }
     else
         std::cout << name << " Can't be repaired, no EnergyPoints left\n";
-    std::cout << HitPoints << " HitPoints left | ";
-    std::cout << EnergyPoints << " EnergyPoints left\n";
 }
