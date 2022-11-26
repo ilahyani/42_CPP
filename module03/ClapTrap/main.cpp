@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 11:54:48 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/25 18:44:13 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/26 08:27:04 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,13 @@ int main(void) {
     ClapTrap    obj("Shiruhigue");
 
     obj.attack ("Akainu");
+    std::cout << "\n";
     obj.takeDamage(5);
-    obj.beRepaired(2);
-    obj.takeDamage(15);
-    obj.beRepaired(111);
+    std::cout << "\n";
+    obj.beRepaired(5);
+    std::cout << "\n";
+    obj.takeDamage(10);
+    std::cout << "\n";
+    obj.attack ("Akainu");
     return (0);
 }
