@@ -1,4 +1,4 @@
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 
 OBJ = $(SRC:%.cpp=%.o)
 
@@ -8,7 +8,7 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
 NAME = Animal
 
-HEADERS = Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
+HEADERS = Animal.hpp Cat.hpp Dog.hpp Brain.hpp
 
 all:	$(NAME)
 

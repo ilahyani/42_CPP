@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 08:25:33 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/28 15:38:54 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:18:45 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ const std::string& Cat::getType(void) {
 }
 
 void    Cat::makeSound(void) {
-    std::cout << "Bark!!";
+    std::cout << "Meow!!";
 }
 
 void Cat::getBrainAddress(void) {
