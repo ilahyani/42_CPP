@@ -29,10 +29,6 @@ A_Animal::~A_Animal() {
 
 const std::string&   A_Animal::getType(void) {
     return (type);
-}
-
-void A_Animal::makeSound(void) {
-    std::cout << "[RELEVENT A_Animal SOUND]\n";
 } 
 
 A_Animal& A_Animal::operator=(const A_Animal& other) {
