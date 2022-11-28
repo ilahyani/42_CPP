@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 08:25:38 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/27 11:05:49 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/28 11:18:04 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "Animal.hpp"
 
-class Cat : virtual public Animal
+class Cat : public Animal
 {
     public:
         Cat();
@@ -23,7 +23,7 @@ class Cat : virtual public Animal
         ~Cat();
         Cat& operator=(const Cat& other);
         const std::string& getType(void);
-        virtual void makeSound(void);
+        void makeSound(void);
 };
 
 #endif
