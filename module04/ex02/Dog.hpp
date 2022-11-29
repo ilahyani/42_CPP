@@ -6,17 +6,17 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 08:25:36 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/28 16:10:38 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/29 11:07:46 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 #define DOG_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Dog : public A_Animal
+class Dog : public AAnimal
 {
     Brain* brain;
     public:

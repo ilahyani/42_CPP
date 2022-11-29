@@ -6,16 +6,16 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 08:24:23 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/28 16:23:53 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/29 11:09:52 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
 int main(void) {
-    A_Animal* test;
+    AAnimal* test;
     Dog dog;
     Cat cat;
 

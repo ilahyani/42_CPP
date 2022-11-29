@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A_Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,20 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef A_Animal_HPP
-#define A_Animal_HPP
+#ifndef AAnimal_HPP
+#define AAnimal_HPP
 
 #include <iostream>
 #include <string>
 
-class A_Animal {
+class AAnimal {
     protected:
         std::string type;
     public:
-        A_Animal();
-        A_Animal(const A_Animal& copy);
-        virtual ~A_Animal();
-        A_Animal& operator=(const A_Animal& other);
+        AAnimal();
+        AAnimal(const AAnimal& copy);
+        virtual ~AAnimal();
+        AAnimal& operator=(const AAnimal& other);
         const std::string& getType(void);
         virtual void makeSound(void) = 0;
 };
