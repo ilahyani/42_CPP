@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 16:32:23 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/28 18:51:05 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/29 10:32:45 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "AMateria.hpp"
 
-class ICharacter
+class ICharacter : public AMateria
 {
     protected:
         std::string name;

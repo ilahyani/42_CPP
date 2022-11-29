@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 16:31:44 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/28 18:53:39 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/29 10:12:35 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,20 @@ AMateria::AMateria() {
 AMateria::AMateria(std::string const& type) {
     std::cout << "AMateria string constructor called\n";
     this->type = type;
+}
+
+AMateria::AMateria(const AMateria& copy) {
+    std::cout << "AMateria copy constructor called\n";
+    *this = copy;
+}
+
+AMateria::~AMateria() {
+    std::cout << "AMateria default destructor called\n";
+}
+
+AMateria& AMateria::operator=(const AMateria& other) {
+    type = other.type;
+    return (*this);
 }
 
 AMateria::~AMateria() {

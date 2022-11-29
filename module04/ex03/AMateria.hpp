@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 16:31:41 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/28 18:53:22 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/29 10:11:58 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class AMateria
     public:
         AMateria();
         AMateria(std::string const & type);
+        AMateria(const AMateria& copy);
+        AMateria& operator=(const AMateria& copy);
         virtual ~AMateria();
         std::string const & getType() const;
         virtual AMateria* clone() const = 0;
