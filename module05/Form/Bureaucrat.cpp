@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 14:22:06 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/29 19:38:51 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/29 21:32:28 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,13 @@ void Bureaucrat::decrementGrade(void) {
     if (grade == 150)
         throw (GradeTooLowException());
     grade++;
+}
+
+void Bureaucrat::signForm(Form& form) {
+    if (form.getIsSign())
+        std::cout << name << " signed " << form.getName() << "\n";
+    else
+        std::cout << name << " couldn't sign " << form.getName() << "\n";
 }
 
 std::ostream& operator<<(std::ostream& stream, const Bureaucrat& obj) {
