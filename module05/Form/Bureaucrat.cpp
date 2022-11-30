@@ -6,11 +6,12 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 14:22:06 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/29 21:32:28 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 10:37:49 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat() {}
 

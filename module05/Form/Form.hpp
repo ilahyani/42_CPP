@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 19:46:17 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/29 22:36:24 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 10:36:27 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include "Bureaucrat.hpp"
 
-class Bureaucrat;
 class Form
 {
     bool is_signed;

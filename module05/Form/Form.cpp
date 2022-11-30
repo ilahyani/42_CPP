@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 19:47:40 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/29 22:38:33 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 11:01:39 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,20 @@
 
 Form::Form(): is_signed(0), gradeToSign(150), gradeToExec(150) {}
 
+Form::~Form() {}
+
 Form::Form(std::string name, int gradeToSign, int gradeToExec)
-    : is_signed(0), gradeToSign(gradeToSign), gradeToExec(gradeToExec), name(name) {}
+    : is_signed(0), gradeToSign(gradeToSign), gradeToExec(gradeToExec), name(name) {
+    if (gradeToSign < 1 || gradeToExec < 1)
+        throw (GradeTooHighException());
+    if (gradeToSign > 150 || gradeToExec > 150)
+        throw (GradeTooLowException());
+}
 
 Form::Form(Form& copy)
     : gradeToSign(getGradeToSign()), gradeToExec(copy.getGradeToExec()) {
     *this = copy;
 }
-
-Form::~Form() {}
 
 Form& Form::operator=(Form& other) {
     this->~Form();

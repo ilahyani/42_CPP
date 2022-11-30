@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 14:22:11 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/29 22:34:42 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 10:36:42 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #include <iostream>
 #include <string>
 #include <exception>
-#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
