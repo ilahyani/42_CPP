@@ -6,16 +6,16 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 11:50:24 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/30 19:21:21 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 19:27:51 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm() : FORM(target, "ShrubberyCreationForm", 145, 137) {}
+ShrubberyCreationForm::ShrubberyCreationForm() : Form(target, "ShrubberyCreationForm", 145, 137) {}
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
-     : FORM(target, "ShrubberyCreationForm", 145, 137), target(target) {}
+     : Form(target, "ShrubberyCreationForm", 145, 137), target(target) {}
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
@@ -34,11 +34,11 @@ const std::string& ShrubberyCreationForm::getTarget(void) const {
 }
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
-    if (FORM::getGradeToExec()) {
+    if (Form::getGradeToExec()) {
         if (executor.getGrade() <= this->getGradeToExec())
             executor.executeForm(*this);
         else
-            throw (FORM::GradeTooLowException());
+            throw (Form::GradeTooLowException());
     }
     else
         std::cout << "Form not signed\n";

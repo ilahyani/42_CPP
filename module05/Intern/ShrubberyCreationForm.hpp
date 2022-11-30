@@ -6,16 +6,16 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 11:27:41 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/30 19:22:32 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 19:27:51 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-#define SHRUBBERYCREATIONFORM_HPP
+#ifndef SHRUBBERYCREATIONForm_HPP
+#define SHRUBBERYCREATIONForm_HPP
 
 #include "Form.hpp"
 
-class ShrubberyCreationForm : public FORM {
+class ShrubberyCreationForm : public Form {
     std::string target;
     public:
         ShrubberyCreationForm();

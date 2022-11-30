@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 18:28:38 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/30 19:22:32 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 19:27:51 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ class Intern
         Intern(Intern& copy);
         ~Intern();
         Intern& operator=(Intern& other);
-        FORM* makeForm(std::string name, std::string target);
-        FORM* newPresidentialPardon(std::string target);
-        FORM* newRobotomyRequest(std::string target);
-        FORM* newShrubberyCreation(std::string target);
+        Form* makeForm(std::string name, std::string target);
+        Form* newPresidentialPardon(std::string target);
+        Form* newRobotomyRequest(std::string target);
+        Form* newShrubberyCreation(std::string target);
 };
 
 #endif

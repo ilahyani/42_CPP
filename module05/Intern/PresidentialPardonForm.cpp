@@ -6,16 +6,16 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 11:26:07 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/30 19:21:21 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 19:27:51 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : FORM(target, "PresidentialPardonForm", 25, 5) {}
+PresidentialPardonForm::PresidentialPardonForm() : Form(target, "PresidentialPardonForm", 25, 5) {}
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target)
-    : FORM(target, "PresidentialPardonForm", 25, 5), target(target) {}
+    : Form(target, "PresidentialPardonForm", 25, 5), target(target) {}
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
@@ -34,11 +34,11 @@ const std::string& PresidentialPardonForm::getTarget(void) const {
 }
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const {
-    if (FORM::getGradeToExec()) {
+    if (Form::getGradeToExec()) {
         if (executor.getGrade() <= this->getGradeToExec())
             executor.executeForm(*this);
         else
-            throw (FORM::GradeTooLowException());
+            throw (Form::GradeTooLowException());
     }
     else
         std::cout << "Form not signed\n";

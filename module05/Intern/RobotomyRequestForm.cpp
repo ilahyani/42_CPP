@@ -6,16 +6,16 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 11:50:03 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/30 19:21:21 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 19:27:51 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : FORM(target, "RobotomyRequestForm", 72, 45) {}
+RobotomyRequestForm::RobotomyRequestForm() : Form(target, "RobotomyRequestForm", 72, 45) {}
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target)
-     : FORM(target, "RobotomyRequestForm", 72, 45), target(target) {}
+     : Form(target, "RobotomyRequestForm", 72, 45), target(target) {}
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
@@ -34,11 +34,11 @@ const std::string& RobotomyRequestForm::getTarget(void) const {
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
-    if (FORM::getGradeToExec()) {
+    if (Form::getGradeToExec()) {
         if (executor.getGrade() <= this->getGradeToExec())
             executor.executeForm(*this);
         else
-            throw (FORM::GradeTooLowException());
+            throw (Form::GradeTooLowException());
     }
     else
         std::cout << "Form not signed\n";

@@ -6,16 +6,16 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 11:26:09 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/30 19:22:32 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 19:27:51 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-#define PRESIDENTIALPARDONFORM_HPP
+#ifndef PRESIDENTIALPARDONForm_HPP
+#define PRESIDENTIALPARDONForm_HPP
 
 #include "Form.hpp"
 
-class PresidentialPardonForm : public FORM {
+class PresidentialPardonForm : public Form {
     std::string target;
     public:
         PresidentialPardonForm();

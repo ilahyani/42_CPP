@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 14:22:06 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/30 19:22:32 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/11/30 19:27:51 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,31 +63,31 @@ void Bureaucrat::decrementGrade(void) {
     grade++;
 }
 
-void Bureaucrat::signFORM(FORM& form) {
-    if (form.getIsSign())
-        std::cout << name << " signed " << form.getName() << "\n";
+void Bureaucrat::signForm(Form& Form) {
+    if (Form.getIsSign())
+        std::cout << name << " signed " << Form.getName() << "\n";
     else
-        std::cout << name << " couldn't sign " << form.getName() << "\n";
+        std::cout << name << " couldn't sign " << Form.getName() << "\n";
 }
 
-void Bureaucrat::executeForm(FORM const & form) const {
-    if (form.getGradeToExec() == 137) {
-        if (ShrubberyCreationFormExecution(form.getTarget()))
-            std::cout << name << " couldn't excute " << form.getName() << "\n";
+void Bureaucrat::executeForm(Form const & Form) const {
+    if (Form.getGradeToExec() == 137) {
+        if (ShrubberyCreationFormExecution(Form.getTarget()))
+            std::cout << name << " couldn't excute " << Form.getName() << "\n";
         else
-            std::cout << name << " excuted " << form.getName() << "\n";
+            std::cout << name << " excuted " << Form.getName() << "\n";
     }
-    else if (form.getGradeToExec() == 45) {
-        if (RobotomyRequestFormExecution(form.getTarget()))
-            std::cout << name << " couldn't excute " << form.getName() << "\n";
+    else if (Form.getGradeToExec() == 45) {
+        if (RobotomyRequestFormExecution(Form.getTarget()))
+            std::cout << name << " couldn't excute " << Form.getName() << "\n";
         else
-            std::cout << name << " excuted " << form.getName() << "\n";
+            std::cout << name << " excuted " << Form.getName() << "\n";
     }
-    else if (form.getGradeToExec() == 5) {
-        if (PresidentialPardonFormExecution(form.getTarget()))
-            std::cout << name << " couldn't excute " << form.getName() << "\n";
+    else if (Form.getGradeToExec() == 5) {
+        if (PresidentialPardonFormExecution(Form.getTarget()))
+            std::cout << name << " couldn't excute " << Form.getName() << "\n";
         else
-            std::cout << name << " excuted " << form.getName() << "\n";
+            std::cout << name << " excuted " << Form.getName() << "\n";
     }
 }
 
