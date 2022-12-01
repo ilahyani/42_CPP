@@ -6,13 +6,13 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 14:22:06 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/29 19:38:51 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/12/01 13:23:04 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() {}
+Bureaucrat::Bureaucrat() : grade(150) {}
 
 Bureaucrat::~Bureaucrat() {}
 
