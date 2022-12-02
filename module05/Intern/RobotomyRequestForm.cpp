@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 11:50:03 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/30 19:27:51 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/12/02 19:16:37 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ const std::string& RobotomyRequestForm::getTarget(void) const {
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
-    if (Form::getGradeToExec()) {
+    if ( Form::getIsSign()) {
         if (executor.getGrade() <= this->getGradeToExec())
             executor.executeForm(*this);
         else
