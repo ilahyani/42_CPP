@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 11:50:24 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/11/30 18:06:40 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/12/02 09:06:10 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ const std::string& ShrubberyCreationForm::getTarget(void) const {
 }
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
-    if (AForm::getGradeToExec()) {
+    if (AForm::getIsSign()) {
         if (executor.getGrade() <= this->getGradeToExec())
             executor.executeForm(*this);
         else
