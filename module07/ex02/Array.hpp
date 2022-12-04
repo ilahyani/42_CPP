@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 11:40:05 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/12/04 13:46:26 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/12/04 14:14:01 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ class Array
             len = 0;
         }
         Array(unsigned int n) : len(n) {
-            tab = new T[n];
+            tab = new T[len];
+            for (unsigned int i = 0; i < len; i++)
+                tab[i] = 0;
         }
         Array(Array &copy) {
             *this = copy;

@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 10:47:11 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/12/04 14:08:59 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/12/04 14:16:35 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,25 +24,21 @@ int main() {
     std::cout << "[Original Array]: ";
     for (int i = 0; i < 10; i++)
         std::cout << x[i] << " ";
-    std::cout << "\n";
 
-    std::cout << "[Assignemet Operator Test]: ";
+    std::cout << "\n[Assignemet Operator Test]: ";
     Array<T> z = x;
     for (int i = 0; i < 10; i++)
         std::cout << z[i] << " ";
-    std::cout << "\n";
 
-    std::cout << "[Copy Constructor Test]: ";
+    std::cout << "\n[Copy Constructor Test]: ";
     Array<T> k(z);
     for (int i = 0; i < 10; i++)
         std::cout << k[i] << " ";
-    std::cout << "\n";
 
-    std::cout << "[Deep Copy Test Test]: ";
+    std::cout << "\n[Deep Copy Test Test]: ";
     for (int i = 0; i < 10; i++)
         x[i] = (i + 97);
-    std::cout << "\n";
-    std::cout << "[Original Array]:   ";
+    std::cout << "\n[Original Array]: ";
     for (int i = 0; i < 10; i++)
         std::cout << x[i] << " ";
     std::cout << "\n[Assigned Array]: ";
