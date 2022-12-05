@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 10:47:31 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/12/05 15:24:57 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/12/05 16:35:46 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,40 @@
 int main()
 {
     MutantStack<int> mstack;
-    mstack.push(5);
-    mstack.push(17);
-    std::cout << mstack.top() << std::endl;
-    mstack.pop();
-    std::cout << mstack.size() << std::endl;
+    MutantStack<int>::iterator it;
+    MutantStack<int>::iterator ite;
+
+    mstack.push(1);
+    mstack.push(2);
     mstack.push(3);
-    mstack.push(5);
-    mstack.push(737);
-    //[...]
-    mstack.push(0);
-    MutantStack<int>::iterator it = mstack.begin();
-    MutantStack<int>::iterator ite = mstack.end();
-    ++it;
-    --it;
+    mstack.push(44);
+    mstack.push(155);
+    mstack.push(168);
+    mstack.push(1337);
+    mstack.push(42);
+    mstack.push(134237);
+    it = mstack.begin();
+    ite = mstack.end();
+    std::cout << "[CONTENT]: ";
     while (it != ite)
     {
-        std::cout << *it << std::endl;
-        ++it;
+        std::cout << *it << " ";
+        it++;
     }
-    std::stack<int> s(mstack);
+    std::cout << "\n[TOP]: " << mstack.top() << std::endl;
+    std::cout << "[SIZE]: " << mstack.size() << std::endl;
+    mstack.pop();
+    mstack.pop();
+    mstack.pop();
+    it = mstack.begin();
+    ite = mstack.end();
+    std::cout << "[CONTENT]: ";
+    while (it != ite)
+    {
+        std::cout << *it << " ";
+        it++;
+    }
+    std::cout << "\n[TOP]: " << mstack.top() << std::endl;
+    std::cout << "[SIZE]: " << mstack.size() << std::endl;
     return 0;
 }

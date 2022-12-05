@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 10:47:47 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/12/05 15:34:55 by ilahyani         ###   ########.fr       */
+/*   Updated: 2022/12/05 16:35:58 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class MutantStack : public std::stack<T, Container>
         ~MutantStack() {}
         MutantStack() {}
         MutantStack(const MutantStack &copy) {
-            (void)copy;
+            *this = copy;
         }
         MutantStack& operator=(const MutantStack &other) {
             (void)other;
