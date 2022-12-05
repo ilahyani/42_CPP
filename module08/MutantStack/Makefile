@@ -1,4 +1,4 @@
-SRC = main.cpp Span.cpp
+SRC = main.cpp
 
 OBJ = $(SRC:%.cpp=%.o)
 
@@ -6,9 +6,9 @@ CC = c++
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
-NAME = Span
+NAME = MutantStack
 
-HEADER = Span.hpp
+HEADER = MutantStack.hpp
 
 all:	$(NAME)
 

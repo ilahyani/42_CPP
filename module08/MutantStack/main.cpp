@@ -5,51 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 08:29:01 by ilahyani          #+#    #+#             */
-/*   Updated: 2022/12/05 10:43:30 by ilahyani         ###   ########.fr       */
+/*   Created: 2022/12/05 10:47:31 by ilahyani          #+#    #+#             */
+/*   Updated: 2022/12/05 15:24:57 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Span.hpp"
+#include "MutantStack.hpp"
 
 int main()
 {
-    Span sp = Span(5);
-
-    try {
-        sp.addNumber(6);
-        sp.addNumber(3);
-        sp.addNumber(17);
-        sp.addNumber(9);
-        sp.addNumber(11);
+    MutantStack<int> mstack;
+    mstack.push(5);
+    mstack.push(17);
+    std::cout << mstack.top() << std::endl;
+    mstack.pop();
+    std::cout << mstack.size() << std::endl;
+    mstack.push(3);
+    mstack.push(5);
+    mstack.push(737);
+    //[...]
+    mstack.push(0);
+    MutantStack<int>::iterator it = mstack.begin();
+    MutantStack<int>::iterator ite = mstack.end();
+    ++it;
+    --it;
+    while (it != ite)
+    {
+        std::cout << *it << std::endl;
+        ++it;
     }
-    catch (std::exception &e) {
-        std::cout << e.what();
-    }
-    sp.printSpan();
-    try {
-        std::cout << sp.shortestSpan() << std::endl;
-        std::cout << sp.longestSpan() << std::endl;
-    }
-    catch (std::exception &e) {
-        std::cout << e.what();
-    }
-    std::cout << "-----------------------------------\n";
-    Span prrr(100);
-
-    try {
-        prrr.fillSpan();
-    }
-    catch (std::exception &e) {
-        std::cout << e.what();
-    }
-    prrr.printSpan();
-    try {
-        std::cout << prrr.shortestSpan() << std::endl;
-        std::cout << prrr.longestSpan() << std::endl;
-    }
-    catch (std::exception &e) {
-        std::cout << e.what();
-    }
+    std::stack<int> s(mstack);
     return 0;
 }
