@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   btc.hpp                                            :+:      :+:    :+:   */
+/*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 20:34:55 by ilahyani          #+#    #+#             */
-/*   Updated: 2023/03/14 20:36:05 by ilahyani         ###   ########.fr       */
+/*   Updated: 2023/03/15 19:44:16 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
+#include <map>
+#include <time.h>
 
-typedef std::pair<std::string, double> sd_pair;
-typedef std::vector< std::pair<std::string, double> > vecpair;
-
-vecpair parse_data(void);
+void                    get_values(std::map<time_t, float> _map, std::string line);
+std::map<time_t, float> parse_data(void);
 
 #endif
