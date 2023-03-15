@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 20:41:53 by ilahyani          #+#    #+#             */
-/*   Updated: 2023/03/14 22:36:19 by ilahyani         ###   ########.fr       */
+/*   Updated: 2023/03/15 18:11:42 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ int main(int ac, char **av) {
 
     if (ac == 2) {
         str = av[1];
+        if (str.size() == 0)
+            return (std::cerr << "Error\n", 1);
         for (size_t i = 0; i < str.size(); i++) {
             if (str[i] == '+' || str[i] == '-' || str[i] == '/' || str[i] == '*') {
                 x = s.top();
                 s.pop();
+                if (s.empty())
+                    return (std::cerr << "Error: operation can't be done\n", 1);
                 if (str[i] == '+')
                     s.top() += x;
                 else if (str[i] == '*')
@@ -47,6 +51,6 @@ int main(int ac, char **av) {
         std::cout << s.top() << "\n";
     }
     else
-        std::cerr << "Error: no arguments\n";
+        std::cerr << "Error\n";
     return 0;
 }
