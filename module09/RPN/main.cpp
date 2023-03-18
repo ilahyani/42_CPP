@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 20:41:53 by ilahyani          #+#    #+#             */
-/*   Updated: 2023/03/17 21:38:57 by ilahyani         ###   ########.fr       */
+/*   Updated: 2023/03/18 19:05:37 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int main(int ac, char **av) {
             continue ;
         }
         else if (str[i] >= '0' && str[i] <= '9')
-            s.push(static_cast<int>(str[i])); // TEST
+            s.push(static_cast<int>(str[i] - 48));
         else if (str[i] != ' ')
             return (std::cerr << "Error\n", 1);
     }
