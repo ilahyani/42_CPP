@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 20:34:18 by ilahyani          #+#    #+#             */
-/*   Updated: 2023/03/15 19:42:39 by ilahyani         ###   ########.fr       */
+/*   Updated: 2023/03/18 16:56:27 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,14 @@ bool    is_number(std::string value)
 
     for (size_t i = 0; i < value.size(); i++) {
         if (value[i] == '.') {
-            if (isFloat) {
-                std::cerr << "Error: bad input\n";
+            if (isFloat)
                 return false;
-            }
             isFloat = true;
         }
-        else if (value[i] < '0' || value[i] > '9') {
-            std::cerr << "Error: bad input\n";
-            return false;
-        }
+        else if (value[i] < '0' || value[i] > '9')return false;
     }
+    if (atof(value.c_str()) < 0 || atof(value.c_str()) > 1000)
+        return false;
     return true;
 }
 
@@ -67,26 +64,20 @@ void    get_values(std::map<time_t, float> _map, std::string line)
     std::string     value;
     float           v;
     struct tm       timeDate;
+    char            *p;
 
     date = line.substr(0, line.find("|"));
     value = line.substr(line.find("|") + 1, line.size());
     date = trim(date);
     value = trim(value);
-    if (!date.size() || !value.size()) {
+    if (!date.size() || !value.size() || !is_number(value)) {
         std::cerr << "Error: bad input\n";
         return;
     }
-    if (!is_number(value)) {
-        std::cerr << "Error: bad input\n";
-        return;
-    }
-    v = strtof(value.c_str(), NULL);
-    if (v < 0 || v > 1000) {
-        std::cerr << "Error: bad input\n";
-        return;
-    }
+    v = atof(value.c_str());
     memset(&timeDate, 0, sizeof(struct tm));
-    if (!strptime(date.c_str(), "%Y-%m-%d", &timeDate)) {
+    p = strptime(date.c_str(), "%Y-%m-%d", &timeDate);
+    if (!p || *p != '\0') {
         std::cerr << "Error: bad input\n";
         return;
     }
@@ -112,7 +103,7 @@ std::map<time_t, float> parse_data(void)
     while (getline(data, line)) {
         memset(&timeDate, 0, sizeof(struct tm));
         strptime(line.substr(0, 10).c_str(), "%Y-%m-%d", &timeDate);
-        m.insert(std::pair<time_t,float>( mktime(&timeDate), strtof(line.substr(11, line.size()).c_str(), NULL)));
+        m.insert(std::pair<time_t,float>( mktime(&timeDate), atof(line.substr(11, line.size()).c_str())));
     }
     return m;
 }
