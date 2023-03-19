@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 20:41:53 by ilahyani          #+#    #+#             */
-/*   Updated: 2023/03/18 19:05:37 by ilahyani         ###   ########.fr       */
+/*   Updated: 2023/03/19 21:35:30 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ int main(int ac, char **av) {
         else if (str[i] != ' ')
             return (std::cerr << "Error\n", 1);
     }
+    if (s.size() != 1)
+        return (std::cerr << "Error: operation can't be done\n", 1);
     std::cout << s.top() << "\n";
     return 0;
 }

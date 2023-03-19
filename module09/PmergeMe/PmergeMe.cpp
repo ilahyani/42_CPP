@@ -6,7 +6,7 @@
 /*   By: ilahyani <ilahyani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 13:24:51 by ilahyani          #+#    #+#             */
-/*   Updated: 2023/03/19 13:24:52 by ilahyani         ###   ########.fr       */
+/*   Updated: 2023/03/19 18:59:24 by ilahyani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ double  mergeInsertSort(int ac, char **av) {
     std::cout << "After:    ";
     printv(v);
     std::cout << "Time to process a range of " <<  ac - 1 << " elements with std::vector : "
-        << std::fixed << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+        << std::fixed << (double)(end - start) / CLOCKS_PER_SEC << " sec\n";
     start = clock();
     sort(d);
     end = clock();
     std::cout << "Time to process a range of " <<  ac - 1 << " elements with std::deque : "
-        << std::fixed << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+        << std::fixed << (double)(end - start) / CLOCKS_PER_SEC << " sec\n";
     return 0;
 }
